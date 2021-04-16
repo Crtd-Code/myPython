@@ -62,6 +62,7 @@ if __name__ == '__main__':
     cookie = login(email,passwd)
 # 获取订阅链接
     info=get_context(cookie)
+    print(123)
     SKey=os.environ.get('SKEY') #CoolPush酷推KEY
     api = 'https://push.xuthus.cc/send/{}'.format(SKey)
     print(info)
