@@ -64,7 +64,8 @@ if __name__ == '__main__':
 # 获取订阅链接
     info=get_context(cookie)
     SKey=os.environ.get('SKEY') #CoolPush酷推KEY
-    print(123)
     api = 'https://push.xuthus.cc/send/{}'.format(SKey)
     print(info)
-    requests.post(api, info.encode('utf-8'))
+    r=requests.post(api, info.encode('utf-8'))
+    if(r.status_code==200):
+        print("推送成功")
