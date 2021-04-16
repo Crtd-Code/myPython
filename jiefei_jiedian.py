@@ -1,6 +1,7 @@
 import random
 import requests
 from lxml import etree
+import os
 
 register_url='https://www.jafiyun.online/auth/register'
 url=''
